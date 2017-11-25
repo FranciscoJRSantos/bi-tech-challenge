@@ -1,14 +1,85 @@
-<!doctype html>
-<title>BI-Tech-Challenge</title>
-<div class=page>
-  <h1>BI-Tech Challenge</h1>
-  {% for item in users_list %}
-      <ul>
-        <li> Name: {{ challenge["name"] }} </li>
-        <li> Description: {{ challenge["description"] }} </li>
-        <li> Location: {{ challenge["location"] }} </li>
-        <li> Prize: {{ challenge["prize"] }} </li>
-      </ul>
-  {% endfor %}
-</div>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>PAgina</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="../static/styles/challenge.css">
+		
+		    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	</head>
+	<body>
+		
+		  <!--nav-->
+		<nav class="navbar">
+    <a href="login.html"><img id="logo" src="../static/images/cavaloNome.png"></a>
+        <div class="menu" onclick="hamburguer(this)">
+            <div class="menu-line1"></div>
+            <div class="menu-line2"></div>
+            <div class="menu-line3"></div>
+        </div>
+    <div class="menu_content">
+        <ul>
+            <li><a class="h_menu" href="#">My profile</a></li>
+            <li><a class="h_menu" href="#">All rankings</a></li>
+            <li><a class="h_menu" href="#">Forum</a></li>
+            <li><a class="h_menu" href="#">Action trains</a></li>
+            <li><a class="h_menu" href="#">Challenges</a></li>
+            <li><a class="h_menu" style="font-weight: 600;" href="#">Log out</a></li>
+        </ul>
+    </div>
+</nav>
+		
+		
+		
+	<div class="container">
+		
 
+<h2> Create a challenge: </h2>
+	  <form>
+	    <div class="boxtext">
+	      <label for="usr">Challenge name:</label>
+	      <input class="form-control" type="text" class="form-control" id="usr">
+	    </div>
+		<div class="boxtext">
+			<label for="comment">Event description:</label>
+		 <textarea class="form-control" rows="5" id="comment"></textarea>
+		   </div>
+	    <div class="boxtext">
+	      <label for="pwd">Challenge location:</label>
+	      <input class="form-control" type="password" class="form-control" id="pwd">
+	    </div>
+		<div class="boxtext">
+				<label for="pwd">Challenge prize:</label>
+				<input class="form-control"  type="password" id="pwd">
+			</div>
+		  <div class="boxtext">
+		 	 <button type="button" onclick="alert('criaste  challenge')">Create challenge</button>
+			  	</div>
+	  </form>
+		
+	</div>
+
+	
+
+
+
+
+
+	
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    function hamburguer(x) {
+        x.classList.toggle("hamb");
+    }
+    $('.menu').click( function () {
+        $('.menu_content').toggleClass('aberto');
+    });
+</script>
+<!--SCRIPTS FOR BOOTSTRAP--->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	
+	</body>
+</html>
