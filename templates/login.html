@@ -18,7 +18,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
 </head>
+
 <body>
+
 <nav class="navbar">
     <a href="login.html"><img id="logo" src="../static/images/cavaloNome.png"></a>
         <div class="menu" onclick="hamburguer(this)">
@@ -27,20 +29,24 @@
             <div class="menu-line3"></div>
         </div>
     <div class="menu_content">
-        <a class="h_menu" href="#">my profile</a>
-        <a class="h_menu" href="#">all rankings</a>
-        <a class="h_menu" href="#">forum</a>
-        <a class="h_menu" href="#">actions trains</a>
-        <a class="h_menu" href="#">challenges</a>
-        <a class="h_menu" href="#">log out</a>
+        <ul>
+            <li><a class="h_menu" href="#">My profile</a></li>
+            <li><a class="h_menu" href="#">All rankings</a></li>
+            <li><a class="h_menu" href="#">Forum</a></li>
+            <li><a class="h_menu" href="#">Action trains</a></li>
+            <li><a class="h_menu" href="#">Challenges</a></li>
+            <li><a class="h_menu" style="font-weight: 600;" href="#">Log out</a></li>
+        </ul>
     </div>
 </nav>
+
 <div class="container-fluid">
+
     <div class="row justify-content-start">
-        <div class="col-6">
+
+        <div class="col col-sm-12 col-md-12 col-lg-6 col-xl-6">
             <h1>Top Members</h1>
-        </div>
-    </div>
+
     <div id="users">
         {% for item in range(0,users_list|length) %}
         <ul>
@@ -49,11 +55,15 @@
         </ul>
         {% endfor %}
     </div>
-    <div class="row justify-content-start">
-        <div class="col-6">
-            <h1>Top Teams</h1>
-        </div>
+
     </div>
+
+    </div>
+
+    <div class="row justify-content-start">
+        <div class="col col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <h1>Top Teams</h1>
+
     <div id="users">
         {% for item in range(0,teams_list|length) %}
         <ul>
@@ -62,6 +72,11 @@
         </ul>
         {% endfor %}
     </div>
+
+        </div>
+
+    </div>
+
     <h2> Sections </h2>
     <div id="users">
         {% for item in range(0,sections_list|length) %}
@@ -81,6 +96,7 @@
         {% endfor %}
     </div>
 </div>
+
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
     function hamburguer(x) {
@@ -94,5 +110,7 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
 </body>
+
 </html>
