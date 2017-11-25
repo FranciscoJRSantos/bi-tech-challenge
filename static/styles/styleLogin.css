@@ -13,45 +13,70 @@ body {
 }
 
 .container-fluid{
+    padding-top:200px;
     height:100%;
     background-color: #195D98;
 }
 
 .text-center {
     color: #FFC952;
-    font-size: 140px;
+    font-size: 9rem;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
 }
 
 .row{
-    width:100%;
-    height:100%;
-    margin:0;
-    padding:0;
+    margin:0 !important;
+}
+
+img{
+    margin-right:2%;
+    width:90px;
+    height:140px;
+
 }
 
 form  {
-
+    margin-top:3%;
+    height:auto;
 }
 
 input {
     width: 400px;
     height: 50px;
-    border-radius: 10px;
+    border-radius: 5px;
+    border: none;
 }
 
 dd {
     padding-bottom: 2%;
+    margin:0;
 }
 
-dl {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#login input{
+    background-color: #FFC952;
+    font-weight: 700;
+    color:white;
 }
 
-#login{
+#login:hover{
+    opacity: 0.9;
+}
 
+@media (max-width: 576px) {
+    .container-fluid {
+        padding-top: 100px;
+    }
+    input {
+        width: 250px;
+    }
+    .text-center{
+        font-size: 6rem;
+    }
+    img{
+        margin-right:2%;
+        width:60px;
+        height:100px;
+
+    }
 }
