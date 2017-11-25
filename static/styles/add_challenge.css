@@ -1,0 +1,169 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: "roboto", bold;
+	
+
+}
+
+.h2{
+  color: #195D98;
+  font-size: 40px;
+  margin-top: 6%;
+		margin-left: 5%;
+	margin-right: 5%;
+
+ 
+
+}
+
+button{
+	
+
+    background-color: #FFC952;
+    color: white;
+    padding: 15px 25px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    right: 0%;
+    margin-left: 80%;
+    margin-top: 2%;
+	margin-left: 70%;
+	float: right;
+	border-radius: 5px !important;
+	margin-bottom: 3%;
+}
+
+
+button:hover{
+	background-color: #195D98;; /* amarelo */
+    border: none;
+    color: white;
+	opacity: 0.7%;
+
+}
+
+
+#logo {
+    padding-left: 20px;
+    padding-top: 20px;
+    width: 120px;
+}
+
+
+.menu {
+    padding-top: 1%;
+    padding-right: 1%;
+    z-index: 1;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.menu-line1, .menu-line2, .menu-line3 {
+    width: 35px;
+    height: 6px;
+    background-color: #FFC952;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.hamb .menu-line1 {
+    width: 40px;
+    transform: rotate(-45deg) translate(-8px, 11px);
+}
+
+.hamb .menu-line2 {
+    opacity: 0;
+}
+
+.hamb .menu-line3 {
+    width: 40px;
+    transform: rotate(45deg) translate(-8px, -11px);
+}
+
+.navbar {
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.menu_content.aberto {
+    z-index: -1;
+    height: 750px;
+    padding-top: 30%;
+    padding-left: 50px;
+    top: 0%;
+    right: 0%;
+    font-size: 2rem;
+    display: inline-block;
+    position: absolute;
+    width: 320px;
+    background-color: #195D98;
+}
+
+.menu_content {
+    display: none;
+}
+
+.menu_content.aberto ul {
+    list-style-type: none;
+}
+
+.menu_content.aberto ul li a{
+    color:white;
+}
+
+.menu_content.aberto ul li a:hover{
+    text-decoration: none;
+    color:#FFC952;
+}
+
+
+form{
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 3%;
+
+}
+
+.container{
+	margin-left: 5%;
+	margin-right: 5%;
+	color: #195D98;
+	margin-top: 2.5%;
+margin-bottom: 3%;
+}
+
+label{
+	margin-top: 2%;
+	color: #195D98;
+}
+
+.boxtext{
+	margin-top: 2%;
+	
+}
+
+.form-control{
+	width: 100%;
+	
+	border: 2px solid #FFC952 !important ;
+}
+textarea{
+	border-bottom-style: 2px;
+}
+
+
+@media screen and (min-width: 1101px) {
+	.h2{
+margin-left: 3% !important;
+		text-align: justify !important;
+	}
+}
