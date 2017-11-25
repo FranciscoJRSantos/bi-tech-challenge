@@ -1,0 +1,14 @@
+<!doctype html>
+<title>BI-Tech-Challenge</title>
+<div class=page>
+  <h1>BI-Tech Challenge</h1>
+  {% for key,challenge in challenges.items() %}
+      <ul>
+        <li> Name: {{ challenge["name"] }} </li>
+        <li> Description: {{ challenge["description"] }} </li>
+        <li> Location: {{ challenge["location"] }} </li>
+        <li> Prize: {{ challenge["prize"] }} </li>
+      </ul>
+  {% endfor %}
+</div>
+
