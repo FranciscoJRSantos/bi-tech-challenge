@@ -98,3 +98,6 @@ bienv/
 
 # mypy
 .mypy_cache/
+
+# JSON SECRETS 
+bi-tech-challenge-firebase-adminsdk-lb96n-c9e1358cc2.json
