@@ -4,65 +4,95 @@
 
 <head>
 
-  <title>Blup Login Done</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blup Login Done</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!--CSS-->
-  <link rel="stylesheet" type="text/css" href="styleLogin.css">
+    <!--GOOGLE FONTS--->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 
-  <!--BOOTSTRAP-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <!--CSS-->
+    <link href="../static/styles/styleMain.css" rel="stylesheet" type="text/css">
+
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
 </head>
-
 <body>
-
-<div class=page>
-
-  <h1>BI-Tech Leadboards</h1>
-
-  <h2> Users </h2>
-  <div id="users">
-  {% for item in range(0,users_list|length) %}
-      <ul>
-        <li> Name: {{ users_list[item][1]["username"] }} </li>
-        <li> Points: {{ users_list[item][1]["points"] }} </li>
-      </ul>
-  {% endfor %}
-  </div>
-
-  <h2> Teams</h2>
-  <div id="users">
-  {% for item in range(0,teams_list|length) %}
-      <ul>
-        <li> Name: {{ teams_list[item][1]["name"] }} </li>
-        <li> Points: {{ teams_list[item][1]["points"] }} </li>
-      </ul>
-  {% endfor %}
-  </div>
-
-  <h2> Sections </h2>
-  <div id="users">
-  {% for item in range(0,sections_list|length) %}
-      <ul>
-        <li> Name: {{ sections_list[item][1]["name"] }} </li>
-        <li> Points: {{ sections_list[item][1]["points"] }} </li>
-      </ul>
-  {% endfor %}
-  </div>
-
-  <h2> Countries</h2>
-  <div id="users">
-  {% for item in range(0,countries_list|length) %}
-      <ul>
-        <li> Name: {{ countries_list[item][1]["name"] }} </li>
-        <li> Points: {{ countries_list[item][1]["points"] }} </li>
-      </ul>
-  {% endfor %}
-  </div>
+<nav class="navbar">
+    <a href="login.html"><img id="logo" src="../static/images/cavaloNome.png"></a>
+        <div class="menu" onclick="hamburguer(this)">
+            <div class="menu-line1"></div>
+            <div class="menu-line2"></div>
+            <div class="menu-line3"></div>
+        </div>
+    <div class="menu_content">
+        <a class="h_menu" href="#">my profile</a>
+        <a class="h_menu" href="#">all rankings</a>
+        <a class="h_menu" href="#">forum</a>
+        <a class="h_menu" href="#">actions trains</a>
+        <a class="h_menu" href="#">challenges</a>
+        <a class="h_menu" href="#">log out</a>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row justify-content-start">
+        <div class="col-6">
+            <h1>Top Members</h1>
+        </div>
+    </div>
+    <div id="users">
+        {% for item in range(0,users_list|length) %}
+        <ul>
+            <li> Name: {{ users_list[item][1]["username"] }} </li>
+            <li> Points: {{ users_list[item][1]["points"] }} </li>
+        </ul>
+        {% endfor %}
+    </div>
+    <div class="row justify-content-start">
+        <div class="col-6">
+            <h1>Top Teams</h1>
+        </div>
+    </div>
+    <div id="users">
+        {% for item in range(0,teams_list|length) %}
+        <ul>
+            <li> Name: {{ teams_list[item][1]["name"] }} </li>
+            <li> Points: {{ teams_list[item][1]["points"] }} </li>
+        </ul>
+        {% endfor %}
+    </div>
+    <h2> Sections </h2>
+    <div id="users">
+        {% for item in range(0,sections_list|length) %}
+        <ul>
+            <li> Name: {{ sections_list[item][1]["name"] }} </li>
+            <li> Points: {{ sections_list[item][1]["points"] }} </li>
+        </ul>
+        {% endfor %}
+    </div>
+    <h2> Countries</h2>
+    <div id="users">
+        {% for item in range(0,countries_list|length) %}
+        <ul>
+            <li> Name: {{ countries_list[item][1]["name"] }} </li>
+            <li> Points: {{ countries_list[item][1]["points"] }} </li>
+        </ul>
+        {% endfor %}
+    </div>
 </div>
-
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    function hamburguer(x) {
+        x.classList.toggle("hamb");
+    }
+    $('.menu').click( function () {
+        $('.menu_content').toggleClass('aberto');
+    });
+</script>
+<!--SCRIPTS FOR BOOTSTRAP--->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </body>
-
 </html>
