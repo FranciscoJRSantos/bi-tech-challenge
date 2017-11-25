@@ -43,6 +43,18 @@ def get_users():
     users = root.child('users').get()
     return users
 
+def get_sections():
+    sections = root.child('sections').get()
+    return sections
+
+def get_teams():
+    teams = root.child('teams').get()
+    return teams
+
+def get_countries():
+    countries = root.child('countries').get()
+    return countries
+
 
 @app.route('/auth', methods=['GET','POST'])
 def auth():
@@ -56,7 +68,14 @@ def auth():
 @app.route('/plat',methods=['GET'])
 def plaf():
     users = get_users()
-    return render_template('login.html', users = users)
+    users_list = sorted(users.items(), key=lambda x: x[1]["points"], reverse = True)
+    teams = get_teams()
+    teams_list = sorted(teams.items(), key=lambda x: x[1]["points"], reverse = True)
+    sections = get_sections()
+    sections_list = sorted(sections.items(), key=lambda x: x[1]["points"], reverse = True)
+    countries = get_countries()
+    countries_list = sorted(countries.items(), key=lambda x: x[1]["points"], reverse = True)
+    return render_template('login.html', users_list = users_list, teams_list = teams_list, sections_list = sections_list, countries_list = countries_list)
 
 
 @app.route('/challenge', methods=['GET'])

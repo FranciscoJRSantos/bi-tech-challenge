@@ -20,9 +20,47 @@
 
 <div class=page>
 
-  <h1>BI-Tech Challenge</h1>
-  <h2> Login done! :D </h2>
+  <h1>BI-Tech Leadboards</h1>
 
+  <h2> Users </h2>
+  <div id="users">
+  {% for item in range(0,users_list|length) %}
+      <ul>
+        <li> Name: {{ users_list[item][1]["username"] }} </li>
+        <li> Points: {{ users_list[item][1]["points"] }} </li>
+      </ul>
+  {% endfor %}
+  </div>
+
+  <h2> Teams</h2>
+  <div id="users">
+  {% for item in range(0,teams_list|length) %}
+      <ul>
+        <li> Name: {{ teams_list[item][1]["name"] }} </li>
+        <li> Points: {{ teams_list[item][1]["points"] }} </li>
+      </ul>
+  {% endfor %}
+  </div>
+
+  <h2> Sections </h2>
+  <div id="users">
+  {% for item in range(0,sections_list|length) %}
+      <ul>
+        <li> Name: {{ sections_list[item][1]["name"] }} </li>
+        <li> Points: {{ sections_list[item][1]["points"] }} </li>
+      </ul>
+  {% endfor %}
+  </div>
+
+  <h2> Countries</h2>
+  <div id="users">
+  {% for item in range(0,countries_list|length) %}
+      <ul>
+        <li> Name: {{ countries_list[item][1]["name"] }} </li>
+        <li> Points: {{ countries_list[item][1]["points"] }} </li>
+      </ul>
+  {% endfor %}
+  </div>
 </div>
 
 </body>

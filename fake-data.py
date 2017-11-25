@@ -7,15 +7,32 @@ firebase_admin.initialize_app(cred, {'databaseURL' : 'https://bi-tech-challenge.
 
 root = db.reference()
 
-archer = {"username": "Archer Sterling", "email": "archer@email.com", "country": "Portugal","section": "JavaDev", "team": "The Cereal Killers" ,"password" : "secret"} 
+archer = {"username": "Archer Sterling", "email": "archer@email.com", "country": "Portugal","section": "JavaDev", "team": "The Cereal Killers" ,"password" : "secret", "points": 5} 
 root.child("users").push(archer)
-lana = {"username": "Lana Kane", "email": "lana@email.com", "country": "Portugal", "section": "PHPDev", "team": "The Cereal Killers", "password" : "secret"} 
+lana = {"username": "Lana Kane", "email": "lana@email.com", "country": "Portugal", "section": "PHPDev", "team": "The Cereal Killers", "password" : "secret","points": 15} 
 root.child("users").push(lana)
-malory = {"username": "Malory Sterling", "email": "malory@email.com", "country": "Portugal", "section": "PythonDev", "team": "The Cereal Killers", "password" : "secret"} 
+malory = {"username": "Malory Sterling", "email": "malory@email.com", "country": "Portugal", "section": "PythonDev", "team": "The Cereal Killers", "password" : "secret","points": 7} 
 root.child("users").push(malory)
-rick = {"username": "Rick Sanchez", "email": "rick@email.com", "country": "Suiça", "section": "JavaDev", "team": "The Ricksters", "password" : "secret"} 
+rick = {"username": "Rick Sanchez", "email": "rick@email.com", "country": "Suiça", "section": "JavaDev", "team": "The Ricksters", "password" : "secret", "points": 6} 
 root.child("users").push(rick)
-morty = {"username": "Morty Smith", "email": "morty@email.com", "country": "Suiça", "section": "PHPDev", "team": "The Ricksters", "password" : "secret"} 
+morty = {"username": "Morty Smith", "email": "morty@email.com", "country": "Suiça", "section": "PHPDev", "team": "The Ricksters", "password" : "secret", "points": 10 } 
 root.child("users").push(morty)
-mrpoopybuthole = {"username": "MrPoopyButhole", "email": "mrpoopybuthole@email.com", "country": "Suiça", "section": "PHPDev", "team": "The Ricksters", "password" : "secret"} 
+mrpoopybuthole = {"username": "MrPoopyButhole", "email": "mrpoopybuthole@email.com", "country": "Suiça", "section": "PythonDev", "team": "The Ricksters", "password" : "secret", "points": 9} 
 root.child("users").push(mrpoopybuthole)
+
+TCK = {"name": "The Cereal Killers", "points": 27, "country": "Portugal" }
+root.child("teams").push(TCK)
+TR = {"name": "The Ricksters", "points": 25, "country": "Suiça" }
+root.child("teams").push(TR)
+
+PythonDev = {"name": "PythonDev", "points": 16}
+root.child("sections").push(PythonDev)
+PHPDev = {"name": "PHPDev", "points": 25 }
+root.child("sections").push(PHPDev)
+JavaDev = {"name": "JavaDev", "points": 11}
+root.child("sections").push(JavaDev)
+
+Portugal = {"name": "Portugal", "points": 27}
+root.child("countries").push(Portugal)
+Suica = {"name": "Suiça", "points": 25 }
+root.child("countries").push(Suica)
