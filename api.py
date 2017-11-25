@@ -37,8 +37,11 @@ def get_auth(username,password):
 
 def get_challenges():
     challenges = root.child('challenges').get()
-    print (challenges)
     return challenges
+
+def get_users():
+    users = root.child('users').get()
+    return users
 
 
 @app.route('/auth', methods=['GET','POST'])
@@ -52,7 +55,8 @@ def auth():
 
 @app.route('/plat',methods=['GET'])
 def plaf():
-    return render_template('login.html')
+    users = get_users()
+    return render_template('login.html', users = users)
 
 
 @app.route('/challenge', methods=['GET'])
