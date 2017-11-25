@@ -7,15 +7,15 @@ firebase_admin.initialize_app(cred, {'databaseURL' : 'https://bi-tech-challenge.
 
 root = db.reference()
 
-archer = {"username": "Archer Sterling", "email": "archer@email.com", "country": "Portugal","section": "JavaDev", "team": "The Cereal Killers" ,"password" : "secret", "points": 5} 
+archer = {"username": "ArcherSterling", "email": "archer@email.com", "country": "Portugal","section": "JavaDev", "team": "The Cereal Killers" ,"password" : "secret", "points": 5} 
 root.child("users").push(archer)
-lana = {"username": "Lana Kane", "email": "lana@email.com", "country": "Portugal", "section": "PHPDev", "team": "The Cereal Killers", "password" : "secret","points": 15} 
+lana = {"username": "LanaKane", "email": "lana@email.com", "country": "Portugal", "section": "PHPDev", "team": "The Cereal Killers", "password" : "secret","points": 15} 
 root.child("users").push(lana)
-malory = {"username": "Malory Sterling", "email": "malory@email.com", "country": "Portugal", "section": "PythonDev", "team": "The Cereal Killers", "password" : "secret","points": 7} 
+malory = {"username": "MalorySterling", "email": "malory@email.com", "country": "Portugal", "section": "PythonDev", "team": "The Cereal Killers", "password" : "secret","points": 7} 
 root.child("users").push(malory)
-rick = {"username": "Rick Sanchez", "email": "rick@email.com", "country": "Suiça", "section": "JavaDev", "team": "The Ricksters", "password" : "secret", "points": 6} 
+rick = {"username": "RickSanchez", "email": "rick@email.com", "country": "Suiça", "section": "JavaDev", "team": "The Ricksters", "password" : "secret", "points": 6} 
 root.child("users").push(rick)
-morty = {"username": "Morty Smith", "email": "morty@email.com", "country": "Suiça", "section": "PHPDev", "team": "The Ricksters", "password" : "secret", "points": 10 } 
+morty = {"username": "MortySmith", "email": "morty@email.com", "country": "Suiça", "section": "PHPDev", "team": "The Ricksters", "password" : "secret", "points": 10 } 
 root.child("users").push(morty)
 mrpoopybuthole = {"username": "MrPoopyButhole", "email": "mrpoopybuthole@email.com", "country": "Suiça", "section": "PythonDev", "team": "The Ricksters", "password" : "secret", "points": 9} 
 root.child("users").push(mrpoopybuthole)
