@@ -13,6 +13,7 @@
 
   <!--CSS-->
   <link rel="stylesheet" type="text/css" href="../static/styles/styleProfile.css">
+	
   <link rel="stylesheet" type="text/css" href="../static/styles/styleMenu_FAzul.css">
 
   <!--BOOTSTRAP-->
@@ -23,7 +24,9 @@
 <body>
 
 <nav class="navbar">
+
   <a href="main.html"><img id="logo" src="../static/images/logoamarelo.png"></a>
+
   <div class="menu" onclick="hamburguer(this)">
     <div class="menu-line1"></div>
     <div class="menu-line2"></div>
@@ -46,37 +49,49 @@
 
 <div class="container-fluid">
 
-  <img src="#">
-
-  <h1 class="text-center"></h1>
-
-  <div class="row justify-content-center">
-
-    <div class="col col-sm-12 col-md-12 col-lg col-xl">
-
-    <ul>
-       <li> Name: {{ user["username"] }}</li>
-       <li> Email: {{ user["email"] }}</li>
-       <li> Country: {{ user["country"] }}</li>
-       <li> Section: {{ user["section"] }}</li>
+  <div class="row align-items-start">
+	  
+	  <div class="col col-sm-12 col-md-12 col-lg-3 col-xl-3 text-center">
+	  	
+<img src="../static/images/ana.png" alt="Smiley face"style="float:left;">
+	  
+	  <b>Section: {{ user["section"] }}</b> 
+	  
+	  </div>
+	  
+    <ul id="info" class="col col-sm-12 col-md-12 col-lg-5 col-xl-5">
+        <li id="name"><b> Name:</b> {{ user["username"] }}</li>
+		<li id="other1"><b>Age: </b> 20 years old</li>
+		<li id="other1"><b>Country:</b> {{ user["country"] }}</li>
+		<li id="other1"><b>Work:</b> {{ user["country"] }}</li>
+	  </ul>
+	  
+	<ul id="info2" class="col col-sm-12 col-md-12 col-lg-4 col-xl-4">
+		<li id="other">99 coins</li>
+		<li id="other"><b>Email:{{ user["email"] }} </b> </li>
+		<li id="other"><b>Telefone: 974573988</b> </li>
     </ul>
 
     </div>
+	
+	</div>
+	
+	<div class="nhecos row align-items-center justify-content-center">
 
-  </div>
-
-  <div class="row justify-content-center">
-
-    <div class="col col-sm col-md col-lg col-xl">
-
-    <ul>
-      <li> Working Points: {{ user["wp"] }} </li>
-      <li> Help Points: {{ user["hp"] }} </li>
-      <li> Favor Points: {{ user["fp"] }} </li>
-    </ul>
-
-    </div>
-
+<div class="text-center box col col-sm-12 col-md-12 col-lg-3 col-xl-3"> 
+	<b>Working Points</b>
+	<p>{{ user["wp"] }}</p></div>
+		
+	<div class="text-center box col col-sm-12 col-md-12 col-lg-3 col-xl-3">
+		<b>Help Points</b>
+		<p> {{ user["hp"] }} </p>
+		</div>
+		
+    <div class="text-center box col col-sm-12 col-md-12 col-lg-3 col-xl-3">
+		<b>Favor Points</b>  
+		<p>{{ user["fp"] }}</p>
+		</div> 
+		
   </div>
 
 </div>

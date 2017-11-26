@@ -67,7 +67,7 @@ def get_question(question):
             return (key,value)
     return False
 
-
+  
 def answer_question(asked, author, answer):
     key,question = get_question(asked)
     to_push = {"author": author, "answer" : answer, "upvotes": 0}
@@ -153,6 +153,7 @@ def show_question(question):
     if request.method == 'POST':
         answer_question(question ,"Xico Santos", request.form["answer"])
     return render_template('show_question.html', question = quest) 
+
 
 if __name__ == '__main__':
     app.run(debug=True)
