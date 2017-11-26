@@ -24,19 +24,10 @@ body {
     width: 100%;
 }
 
-.container-fluid ul li{
-    list-style-type: none;
-}
-
-
-.col {
-    margin-left: 2%;
+.container-fluid ul{
     display: inline-block;
 }
 
-.users{
-    padding-top:3%;
-}
 
 h1 {
     font-size: 2rem !important;

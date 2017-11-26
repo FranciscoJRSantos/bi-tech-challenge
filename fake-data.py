@@ -25,5 +25,5 @@ root.child("trains").push(lunch_train)
 rick_train = {"name":"wubalubadubdub coffee", "location": "Na dimensão C137, nos escritorios da BI, 8º Piso", "data": "25 Novembro 2017 - 17:30" ,"users": {1: "RickSanchez", 2: "MortySmith"}}
 root.child("trains").push(rick_train)
 
-forum_question1 = {"title": "Why should I work in PHP", "author": "RickSanchez", "section" : "PHPDev","answers": {1: {"author": "ArcherSterling", "answer": "You shouldn't, its bad >:/"}, 2: {"author": "MortySmith", "answer": "Well it actually depends on the project you're working on, and your experience with the language, but overall it's a preety good scripting language"}}}
+forum_question1 = {"title": "Why should I work in PHP", "author": "RickSanchez", "section" : "PHPDev","answers": {1: {"author": "ArcherSterling", "answer": "You shouldn't, its bad >:/", "upvotes" : -1}, 2: {"author": "MortySmith", "answer": "Well it actually depends on the project you're working on, and your experience with the language, but overall it's a preety good scripting language", "upvotes": 5}}}
 root.child("forum").push(forum_question1)
