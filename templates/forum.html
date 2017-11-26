@@ -4,7 +4,7 @@
 
 <head>
 
-  <title>Blup Login</title>
+  <title>Forum</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -25,26 +25,15 @@
   <img src="#">
   <h1 class="text-center">blup</h1>
 
+  {% for key,value in forum.items() %}
   <div class="row justify-content-center">
-    <div class="col">
     <ul>
-    <li> Name: {{ user["username"] }}</li> 
-    <li> Email: {{ user["email"] }}</li> 
-    <li> Country: {{ user["country"] }}</li> 
-    <li> Section: {{ user["section"] }}</li> 
+    <li> Title: {{ value["title"] }}</li> 
+    <li> Author: {{ value["author"] }}</li> 
+    <a href="{{ url_for ('show_question', question=value["title"]) }}"> Open Question  </a>
     </ul>
-    </div>
   </div>
-
-  <div class="row justify-content-center">
-    <div class="col">
-    <ul>
-      <li> Working Points: {{ user["wp"] }} </li>
-      <li> Help Points: {{ user["hp"] }} </li>
-      <li> Favor Points: {{ user["fp"] }} </li>
-    </ul>
-    </div>
-  </div>
+  {% endfor %}
 </div>
 
 <!--SCRIPTS FOR BOOTSTRAP -->

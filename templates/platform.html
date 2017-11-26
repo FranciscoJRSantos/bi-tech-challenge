@@ -38,45 +38,40 @@
 <div class="container-fluid">
     <div class="row justify-content-start">
         <div class="col-6">
-            <h1>Top Members</h1>
+            <h1> Working Points Leaderboard </h1>
         </div>
     </div>
     <div id="users">
-        {% for item in range(0,users_list|length) %}
+        {% for item in range(0,3) %}
         <ul>
-            <li> Name: {{ users_list[item][1]["username"] }} </li>
-            <li> Points: {{ users_list[item][1]["points"] }} </li>
+            <li> Name: {{ wp_list[item][1]["username"] }} </li>
+            <li> Points: {{ wp_list[item][1]["wp"] }} </li>
         </ul>
         {% endfor %}
     </div>
     <div class="row justify-content-start">
         <div class="col-6">
-            <h1>Top Teams</h1>
+            <h1>Helping Points Leaderboard</h1>
         </div>
     </div>
     <div id="users">
-        {% for item in range(0,teams_list|length) %}
+        {% for item in range(0,3) %}
         <ul>
-            <li> Name: {{ teams_list[item][1]["name"] }} </li>
-            <li> Points: {{ teams_list[item][1]["points"] }} </li>
+            <li> Name: {{ hp_list[item][1]["name"] }} </li>
+            <li> Points: {{ hp_list[item][1]["hp"] }} </li>
         </ul>
         {% endfor %}
     </div>
-    <h2> Sections </h2>
-    <div id="users">
-        {% for item in range(0,sections_list|length) %}
-        <ul>
-            <li> Name: {{ sections_list[item][1]["name"] }} </li>
-            <li> Points: {{ sections_list[item][1]["points"] }} </li>
-        </ul>
-        {% endfor %}
+    <div class="row justify-content-start">
+        <div class="col-6">
+            <h1>Favor Points Leaderboard</h1>
+        </div>
     </div>
-    <h2> Countries</h2>
     <div id="users">
-        {% for item in range(0,countries_list|length) %}
+        {% for item in range(0,3) %}
         <ul>
-            <li> Name: {{ countries_list[item][1]["name"] }} </li>
-            <li> Points: {{ countries_list[item][1]["points"] }} </li>
+            <li> Name: {{ fp_list[item][1]["name"] }} </li>
+            <li> Points: {{ fp_list[item][1]["fp"] }} </li>
         </ul>
         {% endfor %}
     </div>

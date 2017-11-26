@@ -1,7 +1,8 @@
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Challenges</title>
+		<title>ChoooChoooTrain</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="../static/styles/challenge.css">
 		
@@ -29,24 +30,9 @@
         </ul>
     </div>
 </nav>
-		
-		
-  {% for key,challenge in challenges.items() %}		
-	<div class="container">
-      <div class="boxtext">
-        <label for="usr">Challenge name: {{ challenge["name"] }}</label>
-      </div>
-      <div class="boxtext">
-        <label for="comment">Event description:{{ challenge["description"] }}</label>
-         </div>
-      <div class="boxtext">
-        <label>Challenge location: {{ challenge["location"] }}</label>
-      </div>
-      <div class="boxtext">
-        <label>Challenge prize: {{ challenge["prize"] }}</label>
-      </div>
-    </div>
-  {% endfor %}
+  
+{% for item in range(0,users_list|length) %}
+  
   
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
