@@ -1,20 +1,6 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+/*FUNDO BRANCO*/
 
-html {
-    height: 100%;
-
-}
-
-body {
-    height:100% !important;
-    font-family: Roboto, sans-serif;
-    background-color: #195D98 !important;
-}
-
-#logo {
+/*AMARELO*/#logo {
     padding-left: 20px;
     padding-top: 20px;
     width: 120px;
@@ -72,7 +58,7 @@ body {
     display: inline-block;
     position: absolute;
     width: 320px;
-    background-color: white;
+    background-color: #195D98;
 }
 
 .menu_content {
@@ -84,44 +70,11 @@ body {
 }
 
 .menu_content.aberto ul li a{
-    color: #195D98;
+    color: white;
     font-weight: 600;
 }
 
 .menu_content.aberto ul li a:hover{
     text-decoration: none;
     color: #FFC952;
-}
-
-h1{
-    color: #FFC952 !important;
-}
-.container-fluid {
-    width: 100%;
-    height: 100%;
-}
-.container-fluid h1{
-    padding:2% !important;
-}
-
-.container-fluid img{
-    width:100%;
-    height:auto;
-    padding:0 !important;
-
-}
-
-.row{
-    width: 100%;
-    height:30%;
-border-radius: 5px;
-    margin:0 !important;
-}
-
-.quads{
-    background-color: #FFC952;
-    width:30%;
-    height:100%;
-
-
 }

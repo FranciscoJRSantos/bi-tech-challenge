@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>PAgina</title>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="../static/styles/challenge.css">
-		
-		    <!--BOOTSTRAP-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-	</head>
+		<title>Blup Challenges Available</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--GOOGLE FONTS--->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+        <!--CSS-->
+        <link href="../static/styles/styleMain.css" rel="stylesheet" type="text/css">
+
+        <!--BOOTSTRAP-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    </head>
+
 	<body>
 		
 		  <!--nav-->
@@ -20,19 +28,25 @@
         </div>
     <div class="menu_content">
         <ul>
-            <li><a class="h_menu" href="#">My profile</a></li>
-            <li><a class="h_menu" href="#">All rankings</a></li>
-            <li><a class="h_menu" href="#">Forum</a></li>
-            <li><a class="h_menu" href="#">Action trains</a></li>
-            <li><a class="h_menu" href="#">Challenges</a></li>
-            <li><a class="h_menu" style="font-weight: 600;" href="#">Log out</a></li>
+            <li><a class="h_menu" href="#">my profile</a></li>
+            <li><a class="h_menu" href="">all rankings</a></li>
+            <li><a class="h_menu" href="#">forum</a></li>
+            <li><a class="h_menu" href="#">action trains</a></li>
+            <li><a class="h_menu" href="#">challenges</a></li>
+            <li><a class="h_menu" href="#">log out</a></li>
         </ul>
     </div>
 </nav>
 
 <div class="container-fluid">
 
-  <h1>Monthly Challenge</h1>
+  <h1>Active challenges</h1>
+
+    <img alt="Challenge Dude" src="../static/images/challengeDude.png">
+
+    <div class="row">
+
+<div class="quads col col-sm-12 col-md-6 col-lg-3 col-xl-3">
   {% for item in users_list %}
       <ul>
         <li> Name: {{ challenge["name"] }} </li>
@@ -41,6 +55,10 @@
         <li> Prize: {{ challenge["prize"] }} </li>
       </ul>
   {% endfor %}
+</div>
+
+    </div>
+
 </div>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
