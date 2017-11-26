@@ -19,7 +19,7 @@
 	<body>
 		
 		  <!--nav-->
-		<nav class="navbar">
+	<nav class="navbar">
     <a href="login.html"><img id="logo" src="../static/images/cavaloNome.png"></a>
         <div class="menu" onclick="hamburguer(this)">
             <div class="menu-line1"></div>
@@ -37,31 +37,24 @@
         </ul>
     </div>
 </nav>
-
-<div class="container-fluid">
-
-  <h1>Active challenges</h1>
-
-    <img alt="Challenge Dude" src="../static/images/challengeDude.png">
-
-    <div class="row">
-
-<div class="quads col col-sm-12 col-md-6 col-lg-3 col-xl-3">
-  {% for item in users_list %}
-      <ul>
-        <li> Name: {{ challenge["name"] }} </li>
-        <li> Description: {{ challenge["description"] }} </li>
-        <li> Location: {{ challenge["location"] }} </li>
-        <li> Prize: {{ challenge["prize"] }} </li>
-      </ul>
-  {% endfor %}
-</div>
-
+  {% for key,challenge in challenges.items() %}		
+	<div class="container">
+      <div class="boxtext">
+        <label for="usr">Challenge name: {{ challenge["name"] }}</label>
+      </div>
+      <div class="boxtext">
+        <label for="comment">Event description:{{ challenge["description"] }}</label>
+         </div>
+      <div class="boxtext">
+        <label>Challenge location: {{ challenge["location"] }}</label>
+      </div>
+      <div class="boxtext">
+        <label>Challenge prize: {{ challenge["prize"] }}</label>
+      </div>
     </div>
-
-</div>
-
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  {% endfor %}
+  
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
     function hamburguer(x) {
         x.classList.toggle("hamb");
@@ -74,7 +67,6 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
+	
 </body>
-
 </html>

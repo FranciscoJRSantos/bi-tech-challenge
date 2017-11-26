@@ -25,27 +25,26 @@
   <img src="#">
   <h1 class="text-center">blup</h1>
 
+  {% for key,value in transactions.items() %}
   <div class="row justify-content-center">
-    <div class="col">
     <ul>
-    <li> Name: {{ user["username"] }}</li> 
-    <li> Email: {{ user["email"] }}</li> 
-    <li> Country: {{ user["country"] }}</li> 
-    <li> Section: {{ user["section"] }}</li> 
+    <li> Given: {{ value["giver"] }}</li> 
+    <li> Taker: {{ value["taker"] }}</li> 
+    <li> Reason: {{ value["reason"] }}</li> 
+    <li> Points Given: {{ value["points"] }}</li>
     </ul>
-    </div>
   </div>
-
-  <div class="row justify-content-center">
-    <div class="col">
-    <ul>
-      <li> Working Points: {{ user["wp"] }} </li>
-      <li> Help Points: {{ user["hp"] }} </li>
-      <li> Favor Points: {{ user["fp"] }} </li>
-    </ul>
-    </div>
-  </div>
+  {% endfor %}
 </div>
+
+<form action="{{ url_for('profile', username=user["username"]) }}" method=post>
+    <dl>
+      <dd><input class="form-control" placeholder="Mail" type=text name=mail>
+      <dd><input class="form-control" placeholder="Pontos" type=text name=points>
+      <dd><input class="form-control" placeholder="Reason" type=text name=reason>
+      <dd id="login"><input type=submit value=Login>
+    </dl>
+  </form>
 
 <!--SCRIPTS FOR BOOTSTRAP -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
