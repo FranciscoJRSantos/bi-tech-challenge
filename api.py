@@ -11,6 +11,7 @@ cred = credentials.Certificate("./bi-tech-challenge-firebase-adminsdk-lb96n-c9e1
 firebase_admin.initialize_app(cred, {'databaseURL' : 'https://bi-tech-challenge.firebaseio.com/'})
 root = db.reference()
 
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'safepasswordlol'
 
@@ -22,13 +23,16 @@ def get_auth(username, password):
             return value
     return None
 
+
 def get_challenges():
     challenges = root.child('challenges').get()
     return challenges
 
+
 def get_users():
     users = root.child('users').get()
     return users
+
 
 def get_username(username):
     users = root.child('users').get()
@@ -37,6 +41,7 @@ def get_username(username):
             return value 
     return False
 
+
 def get_usermail(mail):
     users = root.child('users').get()
     for (key,value) in users.items():
@@ -44,13 +49,16 @@ def get_usermail(mail):
             return key,value 
     return False
 
+
 def get_trains():
     trains = root.child('trains').get()
     return trains
 
+
 def get_forum_questions():
     forum_questions = root.child('forum').get()
     return forum_questions
+
 
 def get_question(question):
     forum_questions = get_forum_questions()
@@ -59,6 +67,7 @@ def get_question(question):
             return (key,value)
     return False
 
+  
 def answer_question(asked, author, answer):
     key,question = get_question(asked)
     to_push = {"author": author, "answer" : answer, "upvotes": 0}
@@ -106,6 +115,7 @@ def challenge_add():
     else:
         return render_template('add_challenge.html')
 
+
 @app.route('/profile/<username>', methods=['GET'])
 def profile(username):
     user = get_username(username)
@@ -114,15 +124,18 @@ def profile(username):
     else:
         return abort(404)
 
+
 @app.route('/train', methods = ['GET'])
 def train():
     trains = get_trains()
     return render_template('train.html',trains = trains)
 
+
 @app.route('/forum', methods = ['GET'])
 def forum():
     forum = get_forum_questions()
     return render_template('forum.html', forum = forum)
+
 
 @app.route('/forum/add', methods = ['GET', 'POST'])
 def create_question():

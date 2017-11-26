@@ -23,7 +23,7 @@
 <body>
 
 <nav class="navbar">
-  <a href="main.html"><img id="logo" src="../static/images/cavaloNome.png"></a>
+  <a href="main.html"><img id="logo" src="../static/images/logoazul.png"></a>
   <div class="menu" onclick="hamburguer(this)">
     <div class="menu-line1"></div>
     <div class="menu-line2"></div>
@@ -44,25 +44,29 @@
   </div>
 </nav>
 
-
 <div class="container-fluid">
 
-  <img src="#">
+    <div id="tittle" class="row align-items-center">
 
-  <h1 class="text-center">blup</h1>
+  <h1 class="text-left col-lg-6">Forum</h1>
+
+        <div class="col-lg-5"></div>
+
+    <a id="addNew" class="text-right col-lg-1 text-center " href="add_challenge.html">Add new</a>
+
+    </div>
 
   {% for key,value in forum.items() %}
 
-  <div class="row justify-content-center">
-    <ul>
-    <li> Title: {{ value["title"] }}</li> 
-    <li> Author: {{ value["author"] }}</li> 
-    <a href="{{ url_for ('show_question', question=value["title"]) }}"> Open Question  </a>
+    <ul class="row align-items-center">
+       <li class="col-lg-4 text-center"> Title: {{ value["title"] }}</li>
+       <li class="col-lg-4 text-center"> Author: {{ value["author"] }}</li>
+        <div class="col-lg-2"></div>
+       <a class="col-lg-2 text-center" href="{{ url_for ('show_question', question=value["title"]) }}"> Open Question </a>
     </ul>
-  </div>
+
 
   {% endfor %}
-
 </div>
 
 

@@ -12,7 +12,7 @@
 
         <!--CSS-->
         <link href="../static/styles/styleChallenge.css" rel="stylesheet" type="text/css">
-        <link href="../static/styles/styleMenu_FAmarelo.css" rel="stylesheet" type="text/css">
+        <link href="../static/styles/styleMenu_FAzul.css" rel="stylesheet" type="text/css">
 
         <!--BOOTSTRAP-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -22,7 +22,7 @@
 <body>
 
     <nav class="navbar">
-        <a href="main.html"><img id="logo" src="../static/images/cavaloNome.png"></a>
+        <a href="main.html"><img id="logo" src="../static/images/logoamarelo.png"></a>
         <div class="menu" onclick="hamburguer(this)">
             <div class="menu-line1"></div>
             <div class="menu-line2"></div>
@@ -38,14 +38,23 @@
                 <li><a class="h_menu" href="challenge.html">challenge</a></li>
                 <li><a class="h_menu" href="train.html">choo choo train</a></li>
 
-                <li><a class="h_menu" style="color:#195D98;" href="index.html">log out</a></li>
+                <li><a class="h_menu" style="color:white;" href="index.html">log out</a></li>
             </ul>
         </div>
     </nav>
 
 
-  {% for key,challenge in challenges.items() %}		
-	<div class="container-fluid">
+
+    <img id="manman" src="../static/images/challengeDudeB.png" alt="challengeMan">
+
+    <div class="container-fluid">
+
+<h1>This week's challenge is...</h1>
+
+  {% for key,challenge in challenges.items() %}
+
+        <div class="row text-left">
+
 
       <div class="boxtext">
         <label for="usr">Challenge name: {{ challenge["name"] }}</label>
@@ -61,7 +70,35 @@
       </div>
 
     </div>
+
   {% endfor %}
+
+
+        <h1> Create a challenge: </h1>
+        <form>
+            <div class="boxtext" class="addform">
+                <label for="usr">Challenge name:</label>
+                <input class="form-control" type="text" class="form-control" id="usr">
+            </div>
+            <div class="boxtext" class="addform">
+                <label for="comment">Event description:</label>
+                <textarea class="form-control" rows="5" id="comment"></textarea>
+            </div>
+            <div class="boxtext" class="addform">
+                <label for="pwd">Challenge location:</label>
+                <input class="form-control" type="password" class="form-control" id="pwd">
+            </div>
+            <div class="boxtext" class="addform">
+                <label for="pwd">Challenge prize:</label>
+                <input class="form-control"  type="password" id="pwd">
+            </div>
+            <div class="boxtext" class="addform">
+                <button id="addNew" type="button" onclick="alert('criaste  challenge')">Create challenge</button>
+            </div>
+        </form>
+
+    </div>
+
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
