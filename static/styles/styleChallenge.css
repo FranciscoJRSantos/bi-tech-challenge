@@ -9,119 +9,53 @@ html {
 }
 
 body {
+    width:100% !important;
     height:100% !important;
     font-family: Roboto, sans-serif;
-    background-color: #195D98 !important;
+    background-color: white !important; /*AZUL*/
 }
 
-#logo {
-    padding-left: 20px;
-    padding-top: 20px;
-    width: 120px;
+#manman{
+    margin-top: 1%;
+    width:100%;
+    height:auto;
 }
 
-.menu {
-    padding-top: 1%;
-    padding-right: 1%;
-    z-index: 1;
-    display: inline-block;
-    cursor: pointer;
-}
 
-.menu-line1, .menu-line2, .menu-line3 {
-    width: 35px;
-    height: 6px;
-    background-color: #FFC952;
-    margin-bottom: 8px;
-    border-radius: 10px;
-    transition: 0.5s;
-}
-
-.hamb .menu-line1 {
-    width: 40px;
-    transform: rotate(-45deg) translate(-8px, 11px);
-}
-
-.hamb .menu-line2 {
-    opacity: 0;
-}
-
-.hamb .menu-line3 {
-    width: 40px;
-    transform: rotate(45deg) translate(-8px, -11px);
-}
-
-.navbar {
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-}
-
-.menu_content.aberto {
-    z-index: -1;
-    height: 750px;
-    padding-top: 200px;
-    padding-right:0;
-    padding-bottom: 0;
-    padding-left: 50px;
-    top: 0%;
-    right: 0%;
-    font-size: 2rem;
-    display: inline-block;
-    position: absolute;
-    width: 320px;
-    background-color: white;
-}
-
-.menu_content {
-    display: none;
-}
-
-.menu_content.aberto ul {
-    list-style-type: none;
-}
-
-.menu_content.aberto ul li a{
-    color: #195D98;
-    font-weight: 600;
-}
-
-.menu_content.aberto ul li a:hover{
-    text-decoration: none;
-    color: #FFC952;
-}
-
-h1{
-    color: #FFC952 !important;
-}
 .container-fluid {
     width: 100%;
     height: 100%;
+    padding: 2% !important;
 }
 .container-fluid h1{
-    padding:2% !important;
-}
-
-.container-fluid img{
-    width:100%;
-    height:auto;
-    padding:0 !important;
-
+    color: #195D98 !important;
+    font-size: 1.5rem !important;
 }
 
 .row{
     width: 100%;
-    height:30%;
-border-radius: 5px;
+    height:auto;
+    border-radius: 5px;
     margin:0 !important;
+    background-color: #FFC952;
+    padding:1%;
 }
 
 .quads{
     background-color: #FFC952;
     width:30%;
     height:100%;
+}
 
+#addNew {
+    float: right;
+    height: 30px;
+    padding: 0;
+    border-radius: 5px;
+    margin-top: 2%;
+}
 
+form .addform label{
+    color: #FFC952;
+    margin-top: 2%;
 }

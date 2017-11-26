@@ -70,11 +70,12 @@
 }
 
 .menu_content.aberto ul li a{
-    color: white;
+    color: #FFC952;
     font-weight: 600;
 }
 
 .menu_content.aberto ul li a:hover{
+    transition:0.8s;
     text-decoration: none;
-    color: #FFC952;
+    color: white;
 }

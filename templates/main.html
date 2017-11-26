@@ -4,7 +4,7 @@
 
 <head>
 
-    <title>Blup Login Done</title>
+    <title>Blup: Leaderboards</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,6 +13,7 @@
 
     <!--CSS-->
     <link href="../static/styles/styleMain.css" rel="stylesheet" type="text/css">
+    <link href="../static/styles/styleMenu_FAmarelo.css" rel="stylesheet" type="text/css">
 
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -22,7 +23,7 @@
 <body>
 
 <nav class="navbar">
-    <a href="login.html"><img id="logo" src="../static/images/cavaloNome.png"></a>
+    <a href="main.html"><img id="logo" src="../static/images/logowhite.png"></a>
         <div class="menu" onclick="hamburguer(this)">
             <div class="menu-line1"></div>
             <div class="menu-line2"></div>
@@ -30,62 +31,65 @@
         </div>
     <div class="menu_content">
         <ul>
-            <li><a class="h_menu" href="#">my profile</a></li>
-            <li><a class="h_menu" href="#">all rankings</a></li>
-            <li><a class="h_menu" href="#">forum</a></li>
-            <li><a class="h_menu" href="#">action trains</a></li>
-            <li><a class="h_menu" href="#">challenges</a></li>
-            <li><a class="h_menu" href="#">log out</a></li>
+            <li><a class="h_menu" href="profile.html">my profile</a></li>
+            <li><a class="h_menu" href="main.html">leaderboards</a></li>
+            <li><a class="h_menu" href="work.html">work</a></li>
+            <li><a class="h_menu" href="favors.html">favors</a></li>
+            <li><a class="h_menu" href="forum.html">forum</a></li>
+            <li><a class="h_menu" href="challenge.html">challenge</a></li>
+            <li><a class="h_menu" href="train.html">choo choo train</a></li>
+
+            <li><a class="h_menu" style="color:#195D98;" href="index.html">log out</a></li>
         </ul>
     </div>
 </nav>
 
 <div class="container-fluid">
 
-    <div class="row justify-content-start">
-        <div class="col-6">
-            <h1> Working Points Leaderboard </h1>
-        </div>
-    </div>
-    <div id="users">
-        {% for item in range(0,3) %}
-        <ul>
-            <li> Name: {{ wp_list[item][1]["username"] }} </li>
-            <li> Points: {{ wp_list[item][1]["wp"] }} </li>
-        </ul>
-        {% endfor %}
-    </div>
-
-    </div>
-
-    </div>
+    <h1> Working Points Leaderboard </h1>
 
     <div class="row justify-content-start">
-        <div class="col-6">
-            <h1>Helping Points Leaderboard</h1>
+
+                {% for item in range(0,3) %}
+
+                <ul style="list-style-type: none;" class="col col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <li> Name: {{ wp_list[item][1]["username"] }} </li>
+                    <li> Points: {{ wp_list[item][1]["wp"] }} </li>
+                </ul>
+
+                {% endfor %}
+
         </div>
-    </div>
-    <div id="users">
+
+        <h1>Helping Points Leaderboard</h1>
+
+            <div class="row justify-content-start">
+
+                {% for item in range(0,3) %}
+
+                <ul style="list-style-type: none;" class="col col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <li> Name: {{ hp_list[item][1]["name"] }} </li>
+                    <li> Points: {{ hp_list[item][1]["hp"] }} </li>
+                </ul>
+
+                {% endfor %}
+
+            </div>
+
+<h1>Favor Points Leaderboard</h1>
+
+<div class="row justify-content-start">
+
         {% for item in range(0,3) %}
-        <ul>
-            <li> Name: {{ hp_list[item][1]["name"] }} </li>
-            <li> Points: {{ hp_list[item][1]["hp"] }} </li>
-        </ul>
-        {% endfor %}
-    </div>
-    <div class="row justify-content-start">
-        <div class="col-6">
-            <h1>Favor Points Leaderboard</h1>
-        </div>
-    </div>
-    <div id="users">
-        {% for item in range(0,3) %}
-        <ul>
+
+        <ul style="list-style-type: none;" class="col col-sm-12 col-md-12 col-lg-6 col-xl-6">
             <li> Name: {{ fp_list[item][1]["name"] }} </li>
             <li> Points: {{ fp_list[item][1]["fp"] }} </li>
         </ul>
+
         {% endfor %}
-    </div>
+</div>
+
 </div>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
