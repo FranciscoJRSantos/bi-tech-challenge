@@ -29,3 +29,6 @@ forum_question1 = {"title": "Why should I work in PHP", "author": "RickSanchez",
 root.child("forum").push(forum_question1)
 forum_question2 = {"title": "WHERE IS JOCA????", "author": "ArcherSterling", "section" : "JOCA","answers": {1: {"author": "MortySmith", "answer": "oh jeez man...I don't know...m-m-maybe he went drinking", "upvotes" : 5}}}
 root.child("forum").push(forum_question2)
+
+challenge = {"name" : "Encontrar o Joca", "description" : "We lost Joca pls find him >:(", "location" : "8th floor BI", "prize" : "my heart"} 
+root.child("challenges").push(challenge)

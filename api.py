@@ -86,7 +86,7 @@ def login():
         else:
             return redirect('login')
     else:
-        return render_template('auth.html')
+        return render_template('index.html')
 
 
 @app.route('/platform',methods=['GET'])
@@ -95,7 +95,7 @@ def platform():
     wp_list = sorted(users.items(), key=lambda x: x[1]["wp"], reverse = True)
     fp_list = sorted(users.items(), key=lambda x: x[1]["fp"], reverse = True)
     hp_list = sorted(users.items(), key=lambda x: x[1]["hp"], reverse = True)
-    return render_template('platform.html', wp_list = wp_list, fp_list = fp_list, hp_list = hp_list)
+    return render_template('main.html', wp_list = wp_list, fp_list = fp_list, hp_list = hp_list)
 
 
 @app.route('/challenge', methods=['GET'])

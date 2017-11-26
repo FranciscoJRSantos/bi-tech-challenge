@@ -30,15 +30,15 @@
         </div>
         <div class="menu_content">
             <ul>
-                <li><a class="h_menu" href="profile.html">my profile</a></li>
-                <li><a class="h_menu" href="main.html">leaderboards</a></li>
-                <li><a class="h_menu" href="work.html">work</a></li>
-                <li><a class="h_menu" href="favors.html">favors</a></li>
-                <li><a class="h_menu" href="forum.html">forum</a></li>
-                <li><a class="h_menu" href="challenge.html">challenge</a></li>
-                <li><a class="h_menu" href="train.html">choo choo train</a></li>
+                <li><a class="h_menu" href="profile">my profile</a></li>
+                <li><a class="h_menu" href="platform">leaderboards</a></li>
+                <li><a class="h_menu" href="work">work</a></li>
+                <li><a class="h_menu" href="favors">favors</a></li>
+                <li><a class="h_menu" href="forum">forum</a></li>
+                <li><a class="h_menu" href="challenge">challenge</a></li>
+                <li><a class="h_menu" href="train">choo choo train</a></li>
 
-                <li><a class="h_menu" style="color:white;" href="index.html">log out</a></li>
+                <li><a class="h_menu" style="color:white;" href="index">log out</a></li>
             </ul>
         </div>
     </nav>
@@ -57,16 +57,16 @@
 
 
       <div class="boxtext">
-        <label for="usr">Challenge name: {{ challenge["name"] }}</label>
+        <label for="usr"><strong> Challenge name: </strong> {{ challenge["name"] }} </label> 
       </div>
       <div class="boxtext">
-        <label for="comment">Event description:{{ challenge["description"] }}</label>
+        <label for="comment"><strong>Event description: </strong>{{ challenge["description"] }} </label>
          </div>
       <div class="boxtext">
-        <label>Challenge location: {{ challenge["location"] }}</label>
+        <label> <strong> Challenge location: </strong> {{ challenge["location"] }} </label>
       </div>
       <div class="boxtext">
-        <label>Challenge prize: {{ challenge["prize"] }}</label>
+        <label> <strong> Challenge prize: </strong> {{ challenge["prize"] }} </label>
       </div>
 
     </div>
