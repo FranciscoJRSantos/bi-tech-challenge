@@ -8,7 +8,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!--GOOGLE FONTS--->
+  <!--GOOGLE FONTS-->
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 
   <!--CSS-->
@@ -30,19 +30,18 @@
     <li> Title: {{ question["title"] }}</li> 
     <li> Author: {{ question["author"] }}</li> 
     Answers: 
-    {% for item in range(1,question["answers"]|length) %}
-      <li> Answer: {{ question["answers"][item]["answer"] }} </li>
-    <li> Author: <a href="{{ url_for ('profile', username = question["answers"][item]["author"]) }}"> {{ question["answers"][item]["author"]}}</a></li>
+    {% for item in question["answers"] %}
+      <li> Answer: {{ item["answer"] }} </li>
+    <li> Author: <a href="{{ url_for ('profile', username = item["author"]) }}"> {{ item["author"]}}</a></li>
     {% endfor %}
     </ul>
   </div>
   <form action="{{ url_for('show_question', question = question["title"]) }}" method=post>
     <dl>
       <dd><input class="form-control" placeholder="Answer here" type=text name=answer>
-      <dd id="submit-answer"> Submit Answer<input type=submit >
+      <input type=submit value="Submit Answer" >
     </dl>
   </form>
-  
 </div>
 
 <!--SCRIPTS FOR BOOTSTRAP -->

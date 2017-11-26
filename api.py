@@ -16,7 +16,6 @@ app.config['SECRET_KEY'] = 'safepasswordlol'
 
 
 def get_auth(username, password):
-    print (username)
     users = root.child('users').get()
     for (key,value) in users.items():
         if value["email"] == username and value["password"] == password:
@@ -57,14 +56,17 @@ def get_question(question):
     forum_questions = get_forum_questions()
     for (key,value) in forum_questions.items():
         if value["title"] == question:
-            return value
-    return false
+            return (key,value)
+    return False
 
-#def answer_question(author, answer):
-#    forum_questions = get_forum_questions()
-#    for (key,question) in forum_questions.items():
-#        for (key,answer) in question["answers"]:
-#            if question["answers"][]
+def answer_question(asked, author, answer):
+    key,question = get_question(asked)
+    to_push = {"author": author, "answer" : answer, "upvotes": 0}
+    if question is not False:
+        root.child('forum').child(key).child("answers").push(to_push)
+        return True
+    return False
+
 
 @app.route('/login', methods=['GET','POST'])
 def login():
@@ -132,12 +134,12 @@ def create_question():
 
 @app.route("/forum/show/<question>", methods=['GET','POST'])
 def show_question(question):
+    key,quest = get_question(question)
+    if question is False:
+        question = {}
     if request.method == 'POST':
-        answer_question("Xico Santos", request.form["answer"])
-        render_template('show_question.html', question = question)
-    else:
-        question = get_question(question)
-    return render_template('show_question.html', question = question) 
+        answer_question(question ,"Xico Santos", request.form["answer"])
+    return render_template('show_question.html', question = quest) 
 
 
 if __name__ == '__main__':

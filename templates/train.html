@@ -30,8 +30,19 @@
         </ul>
     </div>
 </nav>
+
+{% for (key,value) in trains.items() %}
+<ul>
+  <li> Name:  {{ value["name"] }} </li>
+  <li> Location: {{ value["location"] }}</li>
+  {% for user in value["users"] %}
+  <ul>
+    <li> {{ user }}</li>
+  </ul>
+  {% endfor %}
   
-{% for item in range(0,users_list|length) %}
+</ul>
+{% endfor %}
   
   
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
