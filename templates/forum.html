@@ -25,15 +25,15 @@
   <img src="#">
   <h1 class="text-center">blup</h1>
 
-  {% for key,value in forum.items() %}
   <div class="row justify-content-center">
+  {% for key,value in forum.items() %}
     <ul>
     <li> Title: {{ value["title"] }}</li> 
     <li> Author: {{ value["author"] }}</li> 
     <a href="{{ url_for ('show_question', question=value["title"]) }}"> Open Question  </a>
     </ul>
-  </div>
   {% endfor %}
+  </div>
 </div>
 
 <!--SCRIPTS FOR BOOTSTRAP -->
