@@ -31,8 +31,11 @@
     <li> Author: {{ question["author"] }}</li> 
     Answers: 
     {% for item in question["answers"] %}
+      {% if item is not none %}
       <li> Answer: {{ item["answer"] }} </li>
-    <li> Author: <a href="{{ url_for ('profile', username = item["author"]) }}"> {{ item["author"]}}</a></li>
+      <li> Author: <a href="{{ url_for ('profile', username = item["author"]) }}"> {{ item["author"]}}</a></li>
+      <li> Upvotes: {{ item["upvotes"] }}
+      {% endif %}
     {% endfor %}
     </ul>
   </div>

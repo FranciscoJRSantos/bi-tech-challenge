@@ -27,3 +27,5 @@ root.child("trains").push(rick_train)
 
 forum_question1 = {"title": "Why should I work in PHP", "author": "RickSanchez", "section" : "PHPDev","answers": {1: {"author": "ArcherSterling", "answer": "You shouldn't, its bad >:/", "upvotes" : -1}, 2: {"author": "MortySmith", "answer": "Well it actually depends on the project you're working on, and your experience with the language, but overall it's a preety good scripting language", "upvotes": 5}}}
 root.child("forum").push(forum_question1)
+forum_question2 = {"title": "WHERE IS JOCA????", "author": "ArcherSterling", "section" : "JOCA","answers": {1: {"author": "MortySmith", "answer": "oh jeez man...I don't know...m-m-maybe he went drinking", "upvotes" : 5}}}
+root.child("forum").push(forum_question2)
