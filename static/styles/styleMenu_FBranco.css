@@ -17,7 +17,7 @@
 .menu-line1, .menu-line2, .menu-line3 {
     width: 35px;
     height: 6px;
-    background-color: #FFC952;
+    background-color: #195D98;
     margin-bottom: 8px;
     border-radius: 10px;
     transition: 0.5s;
@@ -58,7 +58,7 @@
     display: inline-block;
     position: absolute;
     width: 320px;
-    background-color: white;
+    background-color: white !important;
 }
 
 .menu_content {
@@ -75,6 +75,7 @@
 }
 
 .menu_content.aberto ul li a:hover{
+    transition:0.7s;
     text-decoration: none;
     color: #FFC952;
 }
