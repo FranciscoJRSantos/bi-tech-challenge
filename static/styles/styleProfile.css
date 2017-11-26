@@ -10,5 +10,67 @@ html {
 body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
-    background-color: white !important; /*BRANCO*/
+    background-color: white !important; /*BRANCO*/	
 }
+
+.container-fluid{
+	padding:3% !important;
+}
+
+.row img{
+	width:260px;
+	height: 260px;
+}
+
+.row ul{
+	font-size: 1.3rem;
+	display: inline-block;
+	margin:0;
+	color: #195D98;
+	list-style-type: none !important;
+}
+
+.row li{
+
+}
+
+.row #name{
+	color: #FFC952;
+	font-size: 1.8rem;
+}
+.row #info #other1{
+	text-align: left;
+}
+
+.row #info2{
+	float:right;
+}
+
+.row #info2 #other{
+	text-align: right;
+	margin-right:0 !important;
+}
+
+.nhecos{
+	padding:0;
+	margin:0 !important;
+	width:100%;
+}
+
+.box{
+	border-radius: 7px;
+    background-color: #FFC952;
+	margin:2%;
+	padding:3%;
+	color: #195D98;
+	font-size: 1rem !important;	
+}
+
+.box p{
+	color: white;
+	font-size: 1.7rem;
+	font-weight:600;
+}
+
+
+
