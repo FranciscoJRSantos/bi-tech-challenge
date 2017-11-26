@@ -1,6 +1,14 @@
-/*FUNDO AZUL*/
+body{
+	background-color: #FFC952;
+	overflow-x:hidden
+}
 
-/*AMARELO*/#logo {
+
+h2{
+	color: #185D99;
+	margin-left: 5%;
+}
+#logo {
     padding-left: 20px;
     padding-top: 20px;
     width: 120px;
@@ -17,7 +25,7 @@
 .menu-line1, .menu-line2, .menu-line3 {
     width: 35px;
     height: 6px;
-    background-color: #195D98;
+    background-color: #185D99;
     margin-bottom: 8px;
     border-radius: 10px;
     transition: 0.5s;
@@ -48,17 +56,16 @@
 .menu_content.aberto {
     z-index: -1;
     height: 750px;
-    padding-top: 200px;
-    padding-right:0;
-    padding-bottom: 0;
+    padding-top: 30%;
     padding-left: 50px;
+	color: white;
     top: 0%;
     right: 0%;
     font-size: 2rem;
     display: inline-block;
     position: absolute;
     width: 320px;
-    background-color: white !important;
+    background-color: #195D98;
 }
 
 .menu_content {
@@ -70,12 +77,24 @@
 }
 
 .menu_content.aberto ul li a{
-    color: #195D98;
-    font-weight: 600;
+    color:white;
 }
 
-.menu_content.aberto ul li a:hover{
-    transition:0.7s;
-    text-decoration: none;
-    color: #FFC952;
+.container{
+	display: none;
+	
+}
+
+.row{
+	display: inline block;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+	width: 100%;
+   
+}
+
+.col-sm{
+	width: 100%;
+	margin-left: 5%;
 }
