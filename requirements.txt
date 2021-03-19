@@ -18,7 +18,7 @@ googleapis-common-protos==1.5.3
 grpcio==1.7.0
 idna==2.6
 itsdangerous==0.24
-Jinja2==2.10
+Jinja2==2.11.3
 livereload==2.5.1
 MarkupSafe==1.0
 ply==3.8
